@@ -13,7 +13,8 @@ export const swapApi = createApi({
         }),
 
         getSwapDataTopic: builder.query({
-            query: ( {topic, newsCount}) => `everything?q=${topic}&pageSize=${newsCount}&apiKey=${APIKEY}`,
+            query: ( {topic , newsCount}) => `everything?q=${topic}&pageSize=${newsCount}&apiKey=${APIKEY}`,
+            
         }),
     }),
 })

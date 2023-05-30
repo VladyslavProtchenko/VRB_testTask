@@ -15,7 +15,6 @@ const AddModal = ({ closeModal, news, setNews}) => {
                 <input className={input} value={desc} onChange={(e)=>{setDesc(e.target.value)}} type="text" placeholder="description" />
                 <button  className={input} onClick={()=>homeServices.createNews(title, desc, news, setNews, closeModal)}>create</button>
                 <button  className={input} onClick={()=>closeModal(false)}>undo</button>
-                
             </div>
         </div>
     );

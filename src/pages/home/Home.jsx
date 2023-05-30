@@ -26,17 +26,18 @@ const Home = () => {
             <section className={newsContainer}>
                 <div className={header}>
                     <h1 className='w-full text-center'>NEWS</h1>
+                    <div className='text-xs'>изменять, удалять посты можно только созданные автором(самостоятельно), первые 5 без функционала, а так все можно потрогать, поклацать</div> 
                     <span className={add} onClick={()=>setIsModalOpen(true)}>add</span>
                 </div>
+
                 <nav className={filters}>
                     <h1 className='w-full mb-3'>filters: here you can search by parameters</h1>
                     <input type="text" value={titleFilter} onChange={(e)=>setTitleFilter(e.target.value.toLowerCase())} placeholder='searching by title' className={input} />
                     <input type="text" value={descriptionFilter} onChange={(e)=>setDescriptionFilter(e.target.value.toLowerCase())} placeholder='searching by description'  className={input} />
                 </nav>
+
                 <div className={newsSection}>
-
                     {pinedNews && <NewsCard pinedNews={pinedNews} setPinedNews={setPinedNews} item={pinedNews} news={news} setNews={setNews}/>}
-
                     {news && news.filter(item=> item !== pinedNews)
                                     .filter(item => item.title.toLowerCase().includes(titleFilter))
                                     .filter(item => item.description.toLowerCase().includes(descriptionFilter))
@@ -60,11 +61,12 @@ const Home = () => {
 
 export default Home;
 
+
 const filters = 'flex items-center justify-start flex-wrap w-full'
 const input = 'outline-none border px-2 mr-2 mb-2'
-const header = 'flex bg-white items-center justify-between px-10 max-w-[940px] w-full'
+const header = 'flex space-x-2 bg-white items-center justify-between px-10 max-w-[940px] w-full'
 const newsSection = 'flex flex-wrap p-10 bg-white w-full'
 const add = 'material-symbols-outlined cursor-pointer'
-const newsContainer = 'flex flex-col justify-center items-center sm:max-w-[576px] sm:w-full  md:w-[576px] md:w-[576px] w-[940px]'
+const newsContainer = 'flex flex-col justify-center items-center sm:w-full  max-w-[940px] px-10'
 const box = 'flex flex-col flex-auto '
 

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
-
     return (
         <div className={box}>
             <nav className={container}>
@@ -30,9 +29,7 @@ const Header = () => {
 export default Header;
 
 const box = 'flex w-screen justify-center items-center bg-white'
-const container = 'w-[1280px] flex justify-between h-auto items-center'
-const menu = 'flex '
+const container = 'max-w-[940px] px-10 w-full flex justify-between h-auto items-center'
+const menu = 'flex'
 const menuItem = 'hover:underline px-[22px] sm:px-1'
-const logo = 'text-[32px] px-[34px] py-[16px] sm:text-base'
-
-//743e41e5c65d4bd1b7806aa7744a4cc7
+const logo = 'text-[32px] px-[34px] py-[16px] sm:text-base md:text-[24px]'

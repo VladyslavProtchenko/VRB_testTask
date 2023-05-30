@@ -9,7 +9,6 @@ const NewsCard = ({item, news, setNews, pinedNews, setPinedNews}) => {
     
     return (
         <div className={box}>
-
             <span className={pinPostIcon} onClick={()=>homeServices.pinNews(item.title, news, pinedNews, setPinedNews)}>push_pin</span>
 
             <div className={functions}>
@@ -24,14 +23,12 @@ const NewsCard = ({item, news, setNews, pinedNews, setPinedNews}) => {
                 }>delete_forever</span>
             </div>
 
-
             <div className={img} style={{backgroundImage: `url(${item.urlToImage})`}}/>
             <div className='flex-col flex h-1/2 self-end justify-between '>
                 <h1 className={header}>{item.title}</h1>
                 <p className={descStyle}>{item.description}</p>
                 <h2 className={auth}>{item.author}</h2>
             </div>
-
 
             <div className={isEdit? editWindow: 'hidden'}>
                 <h1 className='mb-2'>Change what you want to change</h1>
@@ -55,7 +52,7 @@ const functions = 'flex align-center justify-center absolute text-gray-200 bg-bl
 const deleteItem = 'material-symbols-outlined text-base cursor-pointer '
 const edit = 'material-symbols-outlined text-base flex flex-col justify-center align-center  cursor-pointer'
 
-const box = 'flex min-h-[300px] flex-col relative sm:w-full md:w-1/2 w-1/3 bg-white rounded-lg overflow-hidden shadow-lg mb-3';
+const box = 'flex min-h-[300px] flex-col relative sm:w-full md:w-[48%] w-[30%] mx-1 bg-white rounded-lg overflow-hidden shadow-lg mb-3';
 const header = 'absolute top-10 left-0 right-5 text-white bg-black bg-opacity-50 p-2 rounded';
 const descStyle = 'p-4 text-xs italic text-gray-500 ';
 const auth = 'text-sm text-end mr-4 mb-4 mt-auto ';
